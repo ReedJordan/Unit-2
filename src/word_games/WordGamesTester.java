@@ -1,32 +1,34 @@
 package word_games;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class WordGamesTester {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        //THIS PART WORKS
         // Ask for a word
         System.out.println("Enter a random word: ");
         String chosenWord = input.nextLine();
-        WordGames wordplay = new WordGames(chosenWord);
-        // Scramble it
+        //Scramble it
+        WordGames newGames = new WordGames(chosenWord);
+        String scrambled = newGames.scramble();
         // Print out scrambled word
-        wordplay.scramble();
-        String firstMix = wordplay.scramble();
-        System.out.println(firstMix);
+        System.out.println(scrambled);
+        //THIS PART WORKS
+
         // Ask for an index
         // Ask for random word
-        System.out.println("Enter an integer: ");
+        System.out.println("Enter an integer greater than " +chosenWord.length()+ ": ");
         int idx = input.nextInt();
         input.nextLine();  // skip over the newline
         System.out.println("Enter another word: ");
         String addWord = input.nextLine();
-        wordplay.bananaSplit(idx, addWord);
-        String secondMix = wordplay.bananaSplit(idx, addWord);
-        System.out.println(secondMix);
+
         // Add random word at index
+        String splitBana = newGames.bananaSplit(idx, addWord);
         // Print out the word
-        
+        System.out.println(splitBana);
 
         // Ask for a character (store as a String)
         // Ask for random word
@@ -36,13 +38,11 @@ public class WordGamesTester {
         String pickChar = input.nextLine();
         System.out.println("Enter another word: ");
         String bonusWord = input.nextLine();
-        wordplay.bananaSplit(pickChar,bonusWord);
-        String thirdMix = wordplay.bananaSplit(pickChar,bonusWord);
+
+        String thirdMix = newGames.bananaSplit(pickChar, bonusWord);
         System.out.println(thirdMix);
-        
-        
-        wordplay.toString();
-        String ender = wordplay.toString();
+
+        String ender = newGames.toString();
         System.out.println(ender);
         
         

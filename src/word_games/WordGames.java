@@ -23,16 +23,13 @@ public class WordGames
     {
         // switch first half
         // and second half
-        
-        word = text;
-        
+
         int numCharacters = word.length();
         int halfPoint = numCharacters / 2;
         String firstHalf = word.substring(0, halfPoint);
         String secondHalf = word.substring(halfPoint);
         
         String shaken = secondHalf + firstHalf;
-        
         
         return shaken;
 
@@ -88,7 +85,7 @@ public class WordGames
     public String toString()
     {
         // Games[word]
-        return "[" word "]";
+        return "[" + word + "]";
 
     }
     
