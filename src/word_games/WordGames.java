@@ -71,7 +71,16 @@ public class WordGames
     {
         // Insert insertText after the first
         // occurence of the insertChar
-        return "";
+        
+        String splitChara = insertChar;
+        String plusWord = insertText;
+        
+        int newPoint = word.indexOf(splitChara);
+        String halfOne = word.substring(0,newPoint);
+        String halfTwo = word.substring(newPoint);
+        String newSplit = halfOne + plusWord + halfTwo;
+        
+        return newSplit;
 
     }
 
@@ -79,7 +88,7 @@ public class WordGames
     public String toString()
     {
         // Games[word]
-        return "";
+        return "[" word "]";
 
     }
     
