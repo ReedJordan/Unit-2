@@ -7,8 +7,8 @@ public class WordGamesTester {
 
         // Ask for a word
         System.out.println("Enter a random word: ");
-        String text = input.nextLine();
-        WordGames wordplay = new WordGames(text);
+        String chosenWord = input.nextLine();
+        WordGames wordplay = new WordGames(chosenWord);
         // Scramble it
         // Print out scrambled word
         wordplay.scramble();
@@ -41,7 +41,7 @@ public class WordGamesTester {
         System.out.println(thirdMix);
         
         
-         wordplay.toString()
+        wordplay.toString();
         String ender = wordplay.toString();
         System.out.println(ender);
         
