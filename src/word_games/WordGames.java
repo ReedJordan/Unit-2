@@ -1,10 +1,10 @@
 package word_games;
 
 /**
- * Name: Brandon Smith (put your name here)
- * Date: 10-10-24 (put date of last revision here)
- * Description: This is a collection of methods for a word game that
- * people can play
+ * The Word Games project directed in class
+ * @Reed Jordan
+ * AP Comp Sci A w/ Mr. Smith
+ * 10/11/24
  */
 public class WordGames
 {
@@ -23,10 +23,21 @@ public class WordGames
     {
         // switch first half
         // and second half
-        return "";
+        
+        word = text;
+        
+        int numCharacters = word.length();
+        int halfPoint = numCharacters / 2;
+        String firstHalf = word.substring(0, halfPoint);
+        String secondHalf = word.substring(halfPoint);
+        
+        String shaken = secondHalf + firstHalf;
+        
+        
+        return shaken;
 
     }
-
+    
     /**
      * Modifies a given string by inserting text at the specified index
      * @param insertIdx int index where the text will be inserted
@@ -37,7 +48,15 @@ public class WordGames
     {
         // Insert insertText at the position
         // insertIdx
-        return "";
+        int splitPoint = insertIdx;
+        String midWord = insertText;
+        
+        String partOne = word.substring(0, splitPoint);
+        String partTwo = word.substring(splitPoint);
+        
+        String splitBanana = partOne + midWord + partTwo;
+        
+        return splitBanana;
 
     }
 
@@ -63,5 +82,5 @@ public class WordGames
         return "";
 
     }
-
+    
 }
