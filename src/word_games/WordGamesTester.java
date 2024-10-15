@@ -41,8 +41,9 @@ public class WordGamesTester {
         System.out.println(thirdMix);
         
         
-        
-        System.out.println("This has been fun wordplay with [" text "]");
+         wordplay.toString()
+        String ender = wordplay.toString();
+        System.out.println(ender);
         
         
     }
