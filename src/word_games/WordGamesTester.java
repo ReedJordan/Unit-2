@@ -6,18 +6,22 @@ public class WordGamesTester {
         Scanner input = new Scanner(System.in);
 
         // Ask for a word
-
+        System.out.println("Enter a random word: ");
+        String text = input.nextLine();
+        WordGames wordplay = new WordGames(text);
         // Scramble it
         // Print out scrambled word
-
+        wordplay.scramble();
+        String firstMix = wordplay.scramble();
+        System.out.println(firstMix);
         // Ask for an index
         // Ask for random word
-        System.out.println("Enter an integer: ");
+        /*System.out.println("Enter an integer: ");
         int idx = input.nextInt();
         input.nextLine();  // skip over the newline
         System.out.println("Enter another word: ");
         String word = input.nextLine();
-
+        */
         // Add random word at index
         // Print out the word
 
